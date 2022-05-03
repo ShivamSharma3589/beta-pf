@@ -4,7 +4,7 @@ export default function Home() {
   return (
     <section className="home-section">
       <div className='home-image-section'>
-        <img src={require('../../assets/images/profile.jpg')} className='myImage' />
+        <img src={require('../../assets/images/profile.jpg')} alt="profile" className='myImage' />
       </div>
       <div className='home-intro-section'>
         <div>Hello, I'm</div>

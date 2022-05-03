@@ -5,7 +5,6 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    user-select: none;
 }
 
 :root{
@@ -14,6 +13,10 @@
 
 body{
     font-family: 'Nunito', sans-serif;
+    -webkit-tap-highlight-color: transparent;
+    scroll-behavior: smooth;
+    user-select: none;
+    outline: none;
 }
 
 
@@ -25,7 +28,8 @@ body{
     left: 50%;
     transform: translateX(-50%);
     width: 100%;
-    background-color: rgb(255, 145, 0);
+    background: linear-gradient(80deg, red, purple);
+    box-shadow: -4px -4px 20px rgba(0, 0, 0, 0.8);
     border-radius: 10px 10px 0 0;
     padding: 2px;
     overflow: hidden;
@@ -44,24 +48,23 @@ body{
     align-items: center;
     justify-content: center;
     text-decoration: none;
-    background-color: red;
+    /* background-color: red; */
+    color: #fff;
     width: 3rem;
     height: 3rem;
     transition: .7s ease-in;
 }
 
 .nav-link-icon{
-    color: #000;
     transition: .7s ease-in;
 }
 
 .nav-link-text{
-    color: #000;
     font-size: .7rem;
     transition: .7s ease-in;
 }
 
-.active-nav-link .nav-link-icon{
+/* .active-nav-link .nav-link-icon{
     width: 2.5rem;
     height: 2.5rem;
     display: flex;
@@ -73,20 +76,39 @@ body{
 
 .active-nav-link .nav-link-text{
     font-size: 0;
-}
+} */
 
 /* ============================== main-navbar over ================================== */
 
+
+
+/* ============================== main-section ================================== */
 .main-section{
     min-height: 100vh;
-    background: linear-gradient(10deg, rgb(43, 23, 43), rgb(54, 0, 54), rgb(121, 1, 1));
+    background: linear-gradient(10deg, #750550, #570530, #4C0027);
 }
+
+
+/* ============================== main-section over ================================== */
+
+
+/* ============================== home section ================================== */
 
 .home-section{
     min-height: 100vh;
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
+    justify-content: space-evenly;
+    animation: SCROLL_TO_TOP .7s ease-in-out;
+}
+
+@keyframes SCROLL_TO_TOP{
+    0%{
+        transform: translateY(100vh);
+    }
+    100%{
+        transform: none;
+    }
 }
 
 .home-image-section{
@@ -105,11 +127,15 @@ body{
 
 .home-intro-section{
     font-size: 2rem;
+    color: #fff;
 }
 
 .home-my-name{
     font-size: 3rem;
-    background: linear-gradient(to right top, red, purple, purple, red, red);
+    background: linear-gradient(to right top, red, rgb(255, 0, 43), rgb(255, 73, 104), red, red);
     background-clip: text;
-    color: rgba(0, 0, 0, 0.2);
+    color: rgba(0, 0, 0, 0);
 }
+
+
+/* ============================== home section over ================================== */
