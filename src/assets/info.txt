@@ -1,0 +1,4 @@
+font-family: 'Supermercado One', cursive;   for logo
+font-family: 'Signika', sans-serif;   for heading
+font-family: 'Hi Melody', cursive; for paragraphs
+font-family: 'Poppins', sans-serif;  not in use currently
